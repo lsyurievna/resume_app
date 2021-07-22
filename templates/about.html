@@ -3,6 +3,14 @@
 
 {% block content %}
 
-<h2>Hello, my name is Mila.</h2>
+{% if name is none %}
+<h2>Hello, I have no clue who I am.</h2>
+{% else %}
+<h2>Hello, my name is {{ name }}.</h2>
+{% endif %}
+
+{% for item in list_of_stuff %}
+ {{ item }}
+{% endfor %}
 
 {% endblock %}
