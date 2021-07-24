@@ -9,8 +9,12 @@
 <h2>Hello, my name is {{ name }}.</h2>
 {% endif %}
 
+<img src = "{{ url_for('static', filename = 'profile_pic.jpg') }}" \>
+
+<ul>
 {% for item in list_of_stuff %}
- {{ item }}
+ <li>{{ item }}</li>
 {% endfor %}
+</ul>
 
 {% endblock %}

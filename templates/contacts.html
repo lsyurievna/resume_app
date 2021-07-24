@@ -3,6 +3,24 @@
 
 {% block content %}
 
-<h2>Contacts.</h2>
+<form
+  action="{{api}}"
+  method="POST"
+> <div>
+  <label>
+    Your email:
+    <input type="email" name="_replyto" placeholder="youremail@mail.com">
+  </label>
+  </div>
+
+  <div>
+  <label>
+    Your message:
+    <textarea name="message" placeholder="Write your message here." rows=6 cols=12></textarea>
+  </label>
+  </div>
+
+  <button type="submit">Send</button>
+</form>
 
 {% endblock %}
