@@ -1,10 +1,11 @@
 from flask import Flask, render_template
 import decouple 
+import requests
 
 app = Flask(__name__)
 
 name = "Mila"
-contact = decouple.config("CONTACT_FORM_API", default=None)
+contact = decouple.config("CONTACT_FORM_API" )
 
 @app.route("/")
 def about():
