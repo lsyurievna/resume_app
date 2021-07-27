@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+Blog
+
+<ul>
+{% for post in blog_posts %}
+  <a href = "/blog_listing/{{post['name']}}">
+  <li>{{post["name"]}}</li></a>
+{% endfor %}
+</ul>
+
+{% endblock %}
