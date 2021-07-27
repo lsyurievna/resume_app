@@ -2,12 +2,14 @@ from flask import Flask, render_template
 import decouple 
 import os
 from pathlib import Path
+import markdown
 
 app = Flask(__name__)
 
 name = "Mila"
 contact = decouple.config("CONTACT_FORM_API" )
 blog_posts = []
+name_to_blog_post = {}
 
 #If a file in the blog dir has ".md" extension
 #print its name
@@ -15,10 +17,11 @@ with os.scandir("blog") as it:
   for entry in it:
     if entry.name.endswith(".md") and entry.is_file():
       post_data = Path(entry.path).read_text()
-      
+      html = markdown.markdown[post_data]
+
       blog_posts.append({
         "name": entry.name,
-        "data": post_data
+        "html": html
       })
      
 
@@ -40,4 +43,7 @@ def blog_listing():
 
 @app.route("/blog_listing/<post_name>")
 def blog_entry(post_name):
-  return render_template("blog_entry.html", name = name, post_name = post_name)
+  for post in blog_posts:
+    if post_name == post["name"]:
+      return render_template("blog_entry.html", name = name, post=post)
+  return "Post not found"
