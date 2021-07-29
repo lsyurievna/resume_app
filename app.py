@@ -3,6 +3,7 @@ import decouple
 import os
 from pathlib import Path
 import markdown
+import datetime
 
 app = Flask(__name__)
 
@@ -16,15 +17,18 @@ name_to_blog_post = {}
 with os.scandir("blog") as it:
   for entry in it:
     if entry.name.endswith(".md") and entry.is_file():
+      raw_post_date, post_name = entry.name.split("_")
+      post_date = datetime.datetime.strptime(raw_post_date, "%Y-%m-%d")
+      post_name = post_name.rstrip(".md")
       post_data = Path(entry.path).read_text()
-      html = markdown.markdown[post_data]
+      html = markdown.markdown(post_data)
 
       blog_posts.append({
-        "name": entry.name,
+        "name": post_name,
+        "date": post_date,
         "html": html
       })
      
-
 @app.route("/")
 def about():
   return render_template("about.html", name=name)
