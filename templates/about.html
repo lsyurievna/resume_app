@@ -3,14 +3,40 @@
 
 {% block content %}
 
-{% if name is none %}
-<h2>Hello, I have no clue who I am.</h2>
-{% else %}
-<h2>Hello, my name is {{ name }}.</h2>
-{% endif %}
-
+<div>
+<h2>Hi! My name is {{ name }}. I am a Chemistry Honours student at MUN, currently a member of Dr. 
+  Graham Bodwell's research group. Below is a quick overview about my background :)
+</h2>
 <img src = "{{ url_for('static', filename = 'profile_pic.jpg') }}" \>
 
+<h3>I am good at my studies</h3>
+<ul>
+  <li>GPA: 3.96 out of 4.00</li>
+  <li>Donald and Evelyn Barton Chemistry Scholarship 2020-21</li>
+  <li>Faculty of Science Dean List 2019-2020</li>
+  <li>September 11, 2001 International Scholarship 2019-2020</li>
+</ul>
 
+<h3>I have worked in lots of research labs!</h3>
+<ul>
+  <li>SURA with Dr. Graham Bodwell (Summer 2021)</li>
+  <li>ISWEP with Dr. Yuming Zhao (Fall 2021)</li>
+  <li>ISWEP and SURA with Dr. Erika Merschrod (Fall - Summer 2020)</li>
+  <li>Volunteering position with Dr. Michael Katz</li>
+</ul>
 
+<h3>I have teaching experience</h3>
+<ul>
+  <li>TA for CHEM 1010 labs, both on campus and online 2020-2021</li>
+  <li>Tutor and Tech Support at MUN Language Center 2019</li>
+  <li>English language tutor at SKYENG 2018</li>
+</ul>
+</div>
+
+<p>
+  I am an open-minded, enthusiastic individual, 
+  who loves personal growth, and problem solving.
+   Got a job for me? Feel free to shoot me an email, 
+   or a message. Talk to you soon!
+</p>
 {% endblock %}
