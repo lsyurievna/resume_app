@@ -8,15 +8,17 @@ import datetime
 app = Flask(__name__)
 
 name = "Mila"
-contact = decouple.config("CONTACT_FORM_API" )
+contact = decouple.config("CONTACT_FORM_API")
 blog_posts = []
 name_to_blog_post = {}
+
 
 #If a file in the blog dir has ".md" extension
 #print its name
 with os.scandir("blog") as it:
   for entry in it:
     if entry.name.endswith(".md") and entry.is_file():
+
       raw_post_date, post_name = entry.name.split("_")
       post_date = datetime.datetime.strptime(raw_post_date, "%Y-%m-%d")
       post_name = post_name.rstrip(".md")
