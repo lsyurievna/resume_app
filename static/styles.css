@@ -117,7 +117,7 @@ article{
   list-style-type:none;
 }
 
-.content hr{
+hr{
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
@@ -129,3 +129,24 @@ article{
   text-decoration:none;
 }
 
+h3{
+  padding:5px;
+}
+
+/*CV*/
+
+.CV-block{
+  width:600px;
+  margin:auto;
+  background-color:rgba(255, 255, 255, 0.75);
+  padding:10px;
+  margin-bottom:10px;
+}
+
+.CV-position{
+  font-weight:bold;
+}
+
+.CV-hr{
+  margin-top:10px;
+}
