@@ -10,20 +10,123 @@
 
 <body>
   <nav>
-    <p class="name">Mila</p>
-    <ul>
-      <a href = "/"><li>about</li></a>
-      <a href = "/CV"><li>CV</li></a>
-      <a href = "/blog_listing"><li>blog</li></a>
-      <a href = "/contacts"><li>contacts</li></a>
-    </ul>
+      <a href = "#about-section">About</a>
+      <a href = "#CV-section">CV</a>
+      <a href = "#volunteering-section">Volunteering</a>
+      <a href = "#skills-section">Skills</a>
+      <a href = "#contacts-section">Contacts</a>
   </nav>
 
+  <!--About-->
   <article>
-  {% block content %}
-  
-  {% endblock %}
+  <div  id = "about-section">
+
+    <div class="section">
+      <h3>Hi! My name is {{ name }}.</h3>
+      <h3>I am a Chemistry Honours, Computer Science Minor student at <a href = "https://www.mun.ca/">Memorial
+      University of Newfoundlnd</a>. 
+      I am currently a member of <a href="https://gbodwell.wordpress.com/research/">Dr. 
+      Graham Bodwell's</a> research group. Scroll down to learn more about me :)
+     </h3>
+  ``</div>
+    
+  <img class = "profile-img"src = "{{ url_for('static', filename = 'profile-pic-small.png') }}">
   </article>
+  
+  <article>
+    <div id="CV-section">
+    <div class = "section">
+    <h3>I am good at my studies</h3>
+    <ul>
+      <li>GPA: 3.96 out of 4.00</li>
+      <li>Donald and Evelyn Barton Chemistry Scholarship 2020-21</li>
+      <li>Faculty of Science Dean List 2019-20</li>
+      <li>September 11, 2001 International Scholarship 2019-20</li>
+    </ul>
+    <hr>
+    
+    <h3>I have worked in lots of research labs!</h3>
+    <ul>
+      <li>SURA with Dr. Graham Bodwell (Summer 2021)</li>
+      <li>ISWEP with Dr. Yuming Zhao (Fall 2021)</li>
+      <li>ISWEP and SURA with Dr. Erika Merschrod (Fall - Summer 2020)</li>
+      <li>Volunteering position with Dr. Michael Katz</li>
+    </ul>
+    <hr>
+    
+    <h3>I have teaching experience</h3>
+    <ul>
+      <li>TA for CHEM 1010 labs, both on campus and online 2020-21</li>
+      <li>Tutor and Tech Support at MUN Language Center 2019</li>
+      <li>English language tutor at SKYENG 2018</li>
+    </ul>
+    <hr>
+    </div>
+    </div>
+    </article>
+
+   
+
+      <div class="CV-block"> 
+        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+        <hr class="CV-hr">
+        <p class="CV-position">Summer Research position with Dr. Bodwell (SURA grant) - Summer 2021</p>
+        <hr class="CV-hr">
+        <p class="CV-description">
+          I have a full-time research position in an organic synthesis lab. 
+          My daily routine consists of running reactions, and chromatography columns, NMR experiments,
+          and sometimes MS and IR experiments, as well as a looot of troubleshooting and reading.
+         My project for this summer is mastering the synthesis of
+          recently reported 1,1,9,9-Tetramethyl[9](2,11)teropyrenophane, which is a super cool molecule you can read more about <a href="https://pubmed.ncbi.nlm.nih.gov/29272562/">here</a>. 
+          For my upcoming Honours project, I will be working on functionalizing the abovementioned molecule.
+        </p>
+      </div>
+      
+      <div class="CV-block"> 
+        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+        <hr class="CV-hr">
+        <p class="CV-position">Literature Search position with Dr. Zhao - Fall 2020</p>
+        <hr class="CV-hr">
+        <p class="CV-description">Literature search on detection methods 
+          for phenols for potential cannabinoids' sensor development. 
+        </p>
+      </div>
+      
+      <div class="CV-block"> 
+        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+        <hr class="CV-hr">
+        <p class="CV-position">Teaching Assistant</p>
+        <hr class="CV-hr">
+        <p class="CV-description">Presenting lab techniques to first-year chemistry students, 
+          answering questions(my most favourite part!), grading reports. Overall, 
+          assisting with successful completion of labs.
+        </p>
+      </div>
+      
+      <div class="CV-block"> 
+        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+        <hr class="CV-hr">
+        <p class="CV-position">Summer Researh position (SURA grant) with Dr. Erika Merschrod</p>
+        <hr class="CV-hr">
+        <p class="CV-description">Writing scripts in Python 
+          and ImageJ macro language to analyze SEM pictures of Cobalt Ferrite nanoparticles. 
+        </p>
+      </div>
+      
+      <div class="CV-block"> 
+        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+        <hr class="CV-hr">
+        <p class="CV-position">Researh assistant with Dr. Erika Merschrod</p>
+        <hr class="CV-hr">
+        <p class="CV-description">
+          Synthesis of Cobalt Ferrite nanoparticles (NP) used to create SERS substrates. 
+          Characterization of the NPs with Raman spectroscopy, and Scanning Electron Microscopy (SEM).
+        </p>
+      </div>
+      
+      </div>
+
+
 
   <footer>
     

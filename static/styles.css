@@ -1,15 +1,12 @@
-/*COLORS FOR THE WEBSITE
-165, 196, 212
-132, 153, 177
-123, 109, 141
-89, 63, 98
-73, 59, 42
-*/
 
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 /*FONTS*/
@@ -71,25 +68,25 @@ img{
  
 nav, footer{
   background-color: rgba(132, 153, 177);
-  padding-bottom:25px;
-  padding-top:25px;
+  padding-bottom:10px;
+  padding-top:10px;
   padding-left:1em;
   padding-right:1em;
   margin:0px;
   width:100%;
 }
 
-nav .name{
+nav{
+  overflow:hidden;
+  position:fixed;
+}
+
+nav a{
   float:left;
-}
-
-nav ul{
-  float:right;
-}
-
-nav ul li{
-  display: inline-block;
-  padding-left:20px;
+  width:20%;
+  padding:5px;
+  text-align:center;
+  text-decoration:none;
 }
 
 /*CONTENT SECTION*/
@@ -102,19 +99,16 @@ article{
   padding-bottom:20px;
 }
 
-.content{
+.section{
   width:50%;
   margin:auto;
+  padding-top:60px;
+  padding-bottom:20px;
 }
 
-
-.content img{
+ .profile-img{
   padding-bottom:20px;
   padding-top:20px;
-}
-
-.content ul{
-  list-style-type:none;
 }
 
 hr{
@@ -124,13 +118,12 @@ hr{
   margin-top:5px;
   margin-bottom:10px;
 }
-
-.content a{
-  text-decoration:none;
-}
-
 h3{
   padding:5px;
+}
+
+ul{
+  list-style:none;
 }
 
 /*CV*/
