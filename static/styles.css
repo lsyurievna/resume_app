@@ -132,6 +132,11 @@ ul{
 
 /*CONTACTS*/
 
+.last{
+  padding-top:0px;
+  height:220px;
+}
+
 .contact-form{
   padding-bottom:200px;
   padding-top:100px;
