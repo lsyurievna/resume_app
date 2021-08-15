@@ -1,26 +1,19 @@
-{% extends "layout.html" %}
-{% block title %}About{% endblock %}
-
-{% block content %}
-
-<form
-  action="{{api}}"
-  method="POST"
-> <div>
-  <label>
-    Your email:
-    <input type="email" name="_replyto" placeholder="youremail@mail.com">
-  </label>
-  </div>
+<div class = "section" id = "contacts-section">
 
   <div>
-  <label>
-    Your message:
+  <form
+  action="{{api}}"
+  method="POST"> 
+  <label>Your email:</label>
+  <input type="email" name="_replyto" placeholder="youremail@mail.com">
+  </div>
+
+  <div class = "form-message">
+    <label>Your message:</label>
     <textarea name="message" placeholder="Write your message here." rows=6 cols=12></textarea>
-  </label>
   </div>
 
   <button type="submit">Send</button>
-</form>
+  </form>
 
-{% endblock %}
+</div>

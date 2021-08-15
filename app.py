@@ -13,3 +13,7 @@ contact = decouple.config("CONTACT_FORM_API")
 @app.route("/")
 def about():
   return render_template("layout.html", name=name)
+
+@app.route("/contacts")
+def contacts():
+  return render_template("contacts.html", api = contact)

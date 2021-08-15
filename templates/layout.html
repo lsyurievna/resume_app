@@ -3,247 +3,259 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}{% endblock %} | {{name}} </title>
-  <link rel="stylesheet"  href="{{ url_for('static', filename='styles.css') }}" >
+  <meta name="viewport" content="width=device-width> initial-scale=1.0">
+  <title>Mila</title>
+  <link rel="stylesheet"  href="{{ url_for('static', filename = 'styles.css') }}" >
 </head>
 
 <body>
-  <nav>
-      <a href = "#about-section">About</a>
-      <a href = "#CV-section">CV</a>
-      <a href = "#volunteering-section">Volunteering</a>
-      <a href = "#science-section">Conferences and publications</a>
-      <a href = "#contacts-section">Contacts</a>
-  </nav>
+<div class = "page">
+<!--NAVIGATION-->
 
-  <!--ABOUT-->
-
-  <article>
-  <div  id = "about-section">
-
-    <div class="section">
-      <h3>Hi! My name is {{ name }}.</h3>
-      <h3>I am a Chemistry Honours, Computer Science Minor student at <a href = "https://www.mun.ca/" target='_blank'>Memorial
-      University of Newfoundlnd</a>. 
-      I am currently a member of <a href="https://gbodwell.wordpress.com/research/" target='_blank'>Dr. 
-      Graham Bodwell's</a> research group. Scroll down to learn more about me :)
-      </h3>
-    
-    
-  <img class = "profile-img"src = "{{ url_for('static', filename = 'profile-pic-small.png') }}">
+  <div class = "nav">
+      <div class = "nav-link"><a href = "#about-section">About</a></div>
+      <div class = "nav-link"><a href = "#CV-section">CV</a></div>
+      <div class = "nav-link"><a href = "#volunteering-section">Volunteering</a></div>
+      <div class = "nav-link"><a href = "#science-section">Conferences and publications</a></div>
+      <div class = "nav-link"><a href = "/contacts">Contacts</a></div>
   </div>
-  </article>
-  
+
+<!--ABOUT-->
+
+  <div class = "section about" id = "about-section">
+
+    <div>
+      <h3>Hi! My name is Mila.</h3>
+      <h3>I am a Chemistry Honours Computer Science Minor student at <a href = "https://www.mun.ca/" target='_blank'>
+          Memorial University of Newfoundland</a>. 
+        I am currently a member of <a href="https://gbodwell.wordpress.com/research/" target='_blank'>Dr. 
+        Graham Bodwell's</a> research group. Scroll down to learn more about me :)
+      </h3>
+    </div>
+
+      <div><img class = "profile-img"src ="{{ url_for('static', filename = 'profile-pic-small.png') }}"></div>
+
+  </div>
+
   <!--CV-OVERVIEW-->
 
-  <article>
+  <div class = "section CV-overview" id = "CV-section">
     
-    <div id="CV-section">
-    <div class = "section">
-    <h2 class = "title">CV overview</h2>
-    <h3>I am good at my studies</h3>
-    <ul>
-      <li>GPA: 3.96 out of 4.00</li>
-      <li>Donald and Evelyn Barton Chemistry Scholarship 2020-21</li>
-      <li>Faculty of Science Dean List 2019-20</li>
-      <li>September 11, 2001 International Scholarship 2019-20</li>
-    </ul>
-    <hr>
     
-    <h3>I have worked in lots of research labs!</h3>
-    <ul>
-      <li><a href = "#bodwell">SURA with Dr. Graham Bodwell (Summer 2021)</a></li>
-      <li><a href = "#zhao">ISWEP with Dr. Yuming Zhao (Fall 2020)</a></li>
-      <li><a href = "#mer">ISWEP and SURA with Dr. Erika Merschrod (Winter 2019 - Summer 2020)</a></li>
-      <li><a href = "#katz">Volunteering position with Dr. Michael Katz (Fall 2018)</a></li>
-    </ul>
-    <hr>
-    
-    <h3>I have teaching experience</h3>
-    <ul>
-      <li><a href = "#ta">TA for CHEM 1010 labs, both on campus and online 2019-20</a></li>
-      <li><a href = "#lang-mun">Tutor and Tech Support at MUN Language Center 2019</a></li>
-      <li><a href = "#skyeng">English language tutor at SKYENG 2018</a></li>
-    </ul>
-    <hr>
+      <h2 class = "title">CV overview</h2>
+
+    <div>
+      <h3>I am good at my studies</h3>
+      <ul>
+        <li>GPA: 3.96 out of 4.00</li>
+        <li>Donald and Evelyn Barton Chemistry Scholarship 2020-21</li>
+        <li>Faculty of Science Dean List 2019-20</li>
+        <li>September 11> 2001 International Scholarship 2019-20</li>
+      </ul>
+      <hr>
     </div>
+      
+    <div>
+      <h3>I have worked in lots of research labs!</h3>
+      <ul>
+        <li><a href = "#bodwell">SURA with Dr. Graham Bodwell (Summer 2021)</a></li>
+        <li><a href = "#zhao">ISWEP with Dr. Yuming Zhao (Fall 2020)</a></li>
+        <li><a href = "#mer">ISWEP and SURA with Dr. Erika Merschrod (Winter 2019 - Summer 2020)</a></li>
+        <li><a href = "#katz">Volunteering position with Dr. Michael Katz (Fall 2018)</a></li>
+      </ul>
+      <hr>
     </div>
-    </article>
-
-   <!--DETAILED CV-->
-
-    <article>
-      <h2 class = "title">Detailed CV</h2> 
-      <div class="CV-block", id = "bodwell"> 
-        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
-        <hr class="CV-hr">
-        <p class="CV-position">Summer Research position with Dr. Bodwell (SURA grant) | Summer 2021</p>
-        <hr class="CV-hr">
-        <p class="CV-description">
-          I have a full-time research position in an organic synthesis lab. 
-          My daily routine consists of running reactions, and chromatography columns, NMR experiments,
-          and sometimes MS and IR experiments, as well as a looot of troubleshooting and reading.
-         My project for this summer is mastering the synthesis of
-          recently reported 1,1,9,9-Tetramethyl[9](2,11)teropyrenophane, which is a super cool molecule you can read more about <a href="https://pubmed.ncbi.nlm.nih.gov/29272562/">here</a>. 
-          For my upcoming Honours project, I will be working on functionalizing the abovementioned molecule.
-        </p>
-      </div>
       
-      <div class="CV-block", id = "zhao"> 
-        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
-        <hr class="CV-hr">
-        <p class="CV-position">Literature Search position with Dr. Zhao | Fall 2020</p>
-        <hr class="CV-hr">
-        <p class="CV-description">Literature search on detection methods 
-          for phenols for potential cannabinoids' sensor development. 
-        </p>
-      </div>
-      
-      <div class="CV-block", id = "ta"> 
-        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
-        <hr class="CV-hr">
-        <p class="CV-position">Teaching Assistant | Fall 2019-20</p>
-        <hr class="CV-hr">
-        <p class="CV-description">Presenting lab techniques to first-year chemistry students, 
-          answering questions(my most favourite part!), grading reports. Overall, 
-          assisting with successful completion of labs.
-        </p>
-      </div>
-      
-      <div class="CV-block", id="mer"> 
-        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
-        <hr class="CV-hr">
-        <p class="CV-position">Summer Researh position (SURA grant) with Dr. Erika Merschrod | Summer 2020</p>
-        <hr class="CV-hr">
-        <p class="CV-description">Writing scripts in Python 
-          and ImageJ macro language to analyze SEM pictures of Cobalt Ferrite nanoparticles. 
-        </p>
-      </div>
-      
-      <div class="CV-block"> 
-        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
-        <hr class="CV-hr">
-        <p class="CV-position">Researh assistant with Dr. Erika Merschrod | Winter 2019-20</p>
-        <hr class="CV-hr">
-        <p class="CV-description">
-          Synthesis of Cobalt Ferrite nanoparticles (NP) used to create SERS substrates. 
-          Characterization of the NPs with Raman spectroscopy, and Scanning Electron Microscopy (SEM).
-        </p>
-      </div>
-
-      <div class="CV-block" id="lang-mun"> 
-        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
-        <hr class="CV-hr">
-        <p class="CV-position">Language Tutor and Tech Support | Fall 2019</p>
-        <hr class="CV-hr">
-        <p class="CV-description">
-          Tutoring Russian and Italian in a help center. 
-          Providing student with technical assistance if required. 
-        </p>
-      </div>
-
-      <div class="CV-block" id = "skyeng"> 
-        <p class="CV-place">SKYENG</p>
-        <hr class="CV-hr">
-        <p class="CV-position">Language Tutor | Fall 2019</p>
-        <hr class="CV-hr">
-        <p class="CV-description">
-          Teaching English to Russian adults online. 
-        </p>
-      </div>
-
-      </div>
-    </article>
-
-    <!--VOLUNTEERING-->
-
-    <article>
-      <div id = "volunteering-section" class = "section">
-      <h2 class = "title">Volunteering</h2> 
-      <div class="CV-block", id = "katz"> 
-        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
-        <hr class="CV-hr">
-        <p class="CV-position">Research Assistant | Fall 2018</p>
-        <hr class="CV-hr">
-        <p class="CV-description">
-          Inorganic synthesis of metal organic frameworks (MOFs), their surface area measurement
-          and characterization.
-        </p>
-      </div>
-
-      <div class="CV-block", id = "gwb"> 
-        <hr class="CV-hr">
-        <p class="CV-place">MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p> 
-        <p class="CV-position">IUPAC Global Women Breakfast | Winter 2021</p>
-        <hr class="CV-hr">
-        <p class="CV-description">
-          I was a co-organiser and monitored a conversation session of a Global 
-          Women Breakfast (GWB) event at my institution in 2021. The goal of 
-          GWB is to celebrate the accomplishments of Women in Science and to 
-          inspire younger generations to pursue careers in science.
-        </p>
-      </div>
+    <div>
+      <h3>I have teaching experience</h3>
+      <ul>
+        <li><a href = "#ta">TA for CHEM 1010 labs> both on campus and online 2019-20</a></li>
+        <li><a href = "#lang-mun">Tutor and Tech Support at MUN Language Center 2019</a></li>
+        <li><a href = "#skyeng">English language tutor at SKYENG 2018</a></li>
+      </ul>
+      <hr>
     </div>
-    </article>
 
-   <!--CONFERENCES AND PUBLICATIONS-->
-
-    <article>
-      <div id = "science-section" class = "section">
-      <h2 class = "title">Conferences and publications</h2> 
-      <div class="CV-block"> 
-        <p class="CV-position">ChemCon 2021</p>
-        <hr class="CV-hr">
-        <p class="CV-description">
-          I gave a talk presenting the results on one of my
-          projects with Dr. Erika Merschrod "Solving Crime from Home". 
-          I was analysing Raman spectra of filter-tip pens for forensic
-          applications. 
-        </p>
-      </div>
-
-        <div class="CV-block"> 
-          <p class="CV-position">CCCE 2021</p>
-          <hr class="CV-hr">
-          <p class="CV-description">
-            I am a co-author for one of the 2021 CCCE talks 
-            "Use of Nanoscale Ferrites as Complex Surface Components". The main 
-            author of the talk is brillian Stephanie Gallant, a  Ph.D. candidate at MUN.
-          </p>
-        </div>
-
-    </div>
-    </article>
-
-    <!--CONTACTS-->
-  <article class = "contact-form" id = "contacts-section">
-  <div class = "section last">
-  <form
-  action="{{api}}"
-  method="POST"> 
-
-  <div>
-  <label>Your email:</label>
-  <input type="email" name="_replyto" placeholder="youremail@mail.com">
   </div>
 
-  <div class = "form-message">
-    <label>Your message:</label>
-    <textarea name="message" placeholder="Write your message here." rows=6 cols=12></textarea>
+<!--DETAILED CV-->
+
+<div class = "section CV">
+
+  <h2 class = "title">Detailed CV</h2> 
+
+  <div id = "bodwell"> 
+    <p>MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+    <hr>
+    <p>Summer Research position with Dr. Bodwell (SURA grant) | Summer 2021</p>
+    <hr>
+    <p>
+      I have a full-time research position in an organic synthesis lab. 
+      My daily routine consists of running reactions, and chromatography columns, NMR experiments,
+      and sometimes MS and IR experiments> as well as a looot of troubleshooting and reading.
+     My project for this summer is mastering the synthesis of
+      recently reported 1,1,9,9-Tetramethyl[9](2,11)teropyrenophane, which is a super cool molecule you can read more about <a href="https://pubmed.ncbi.nlm.nih.gov/29272562/">here</a>. 
+      For my upcoming Honours project, I will be working on functionalizing the abovementioned molecule.
+    </p>
   </div>
-
-  <button type="submit">Send</button>
-</form>
-</div>
-</article>
-
-  <footer>
-    <div><a href = "https://www.facebook.com/girlluyda/" target = "_blank"><img src = "{{ url_for('static', filename = 'facebook.png') }}"></a></div>
-    <div><a href = "https://github.com/lsyurievna" target = "_blank"><img src = "{{ url_for('static', filename = 'github.png') }}"></a></div>
-  </footer>
   
+  <div id = "zhao"> 
+    <p>MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+    <hr>
+    <p>Literature Search position with Dr. Zhao | Fall 2020</p>
+    <hr>
+    <p>Literature search on detection methods 
+      for phenols for potential cannabinoids' sensor development. 
+    </p>
+  </div>
+  
+  <div id = "ta"> 
+    <p>MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+    <hr>
+    <p>Teaching Assistant | Fall 2019-20</p>
+    <hr>
+    <p>Presenting lab techniques to first-year chemistry students> 
+      answering questions(my most favourite part!) grading reports. Overall
+      assisting with successful completion of labs.
+    </p>
+  </div>
+  
+  <div id="mer"> 
+    <p>MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+    <hr>
+    <p>Summer Researh position (SURA grant) with Dr. Erika Merschrod | Summer 2020</p>
+    <hr>
+    <p>Writing scripts in Python 
+      and ImageJ macro language to analyze SEM pictures of Cobalt Ferrite nanoparticles. 
+    </p>
+  </div>
+  
+  <div> 
+    <p>MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+    <hr>
+    <p>Researh assistant with Dr. Erika Merschrod | Winter 2019-20</p>
+    <hr>
+    <p>
+      Synthesis of Cobalt Ferrite nanoparticles (NP) used to create SERS substrates. 
+      Characterization of the NPs with Raman spectroscopy and Scanning Electron Microscopy (SEM).
+    </p>
+  </div>
+
+  <div id="lang-mun"> 
+    <p>MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+    <hr>
+    <p>Language Tutor and Tech Support | Fall 2019</p>
+    <hr>
+    <p>
+      Tutoring Russian and Italian in a help center. 
+      Providing student with technical assistance if required. 
+    </p>
+  </div>
+
+  <div id = "skyeng"> 
+    <p>SKYENG</p>
+    <hr>
+    <p>Language Tutor | Fall 2019</p>
+    <hr>
+    <p>
+      Teaching English to Russian adults online. 
+    </p>
+  </div>
+
+</div>
+
+<!--VOLUNTEERING-->
+
+
+<div class="section" id = "volunteering-section">
+
+  <h2 class = "title">Volunteering</h2> 
+  <div id = "katz"> 
+    <p>MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p>
+    <hr>
+    <p>Research Assistant | Fall 2018</p>
+    <hr>
+    <p>
+      Inorganic synthesis of metal organic frameworks (MOFs), their surface area measurement
+      and characterization.
+    </p>
+  </div>
+
+  <div id = "gwb"> 
+    <hr>
+    <p>MEMORIAL UNIVERSITY OF NEWFOUNDLAND</p> 
+    <p>IUPAC Global Women Breakfast | Winter 2021</p>
+    <hr>
+    <p>
+      I was a co-organiser and monitored a conversation session of a Global 
+      Women Breakfast (GWB) event at my institution in 2021. The goal of 
+      GWB is to celebrate the accomplishments of Women in Science and to 
+      inspire younger generations to pursue careers in science.
+    </p>
+  </div>
+</div>
+
+<!--CONFERENCES AND PUBLICATIONS-->
+
+<div class="section" id = "science-section">
+
+  <h2>Conferences</h2>
+  <h2> and </h2>
+  <h2 class = "title">publications</h2>
+
+  <div> 
+    <p>ChemCon 2021</p>
+    <hr>
+    <p>
+      I gave a talk presenting the results on one of my
+      projects with Dr. Erika Merschrod "Solving Crime from Home". 
+      I was analysing Raman spectra of filter-tip pens for forensic
+      applications. 
+    </p>
+  </div>
+
+    <div> 
+      <p>CCCE 2021</p>
+      <hr>
+      <p>
+        I am a co-author for one of the 2021 CCCE talks 
+        "Use of Nanoscale Ferrites as Complex Surface Components". The main 
+        author of the talk is brillian Stephanie Gallant, a  Ph.D. candidate at MUN.
+      </p>
+    </div>
+
+</div>
+
+<!--CONTACTS-->
+
+  <div class = "section" id = "contacts-section">
+
+    <div>
+    <form
+    action="{{api}}"
+    method="POST"> 
+    <label>Your email:</label>
+    <input type="email" name="_replyto" placeholder="youremail@mail.com">
+    </div>
+
+    <div class = "form-message">
+      <label>Your message:</label>
+      <textarea name="message" placeholder="Write your message here." rows=6 cols=12></textarea>
+    </div>
+
+    <button type="submit">Send</button>
+    </form>
+
+  </div>
+
+<!--FOOTER-->
+
+<div class="footer">
+  <div><a href = "https://www.facebook.com/girlluyda/" target = "_blank"><img src = "{{ url_for('static', filename = 'facebook.png') }}"></a></div>
+  <div><a href = "https://github.com/lsyurievna" target = "_blank"><img src = "{{ url_for('static', filename = 'github.png') }}"></a></div>
+</div>
+
+
+</div>
 
 </body>
-</html>
- 
