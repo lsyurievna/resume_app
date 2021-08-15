@@ -53,6 +53,17 @@ body {
   color: rgb(13, 31, 45);
 }
 
+.back-link{
+  color:black;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.nav-contacts{
+  justify-content: center;
+  align-content: center;
+  padding-top:20px;
+}
 /*CONTENT*/
 
 .section {
@@ -96,7 +107,7 @@ hr{
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   margin-top:5px;
-  margin-bottom:10px;
+  margin-bottom:15px;
 }
 
 ul{
@@ -143,9 +154,10 @@ button:hover{
   color: rgb(48, 100, 139);
 }
 
-.footer img{
+.footer img, .nav img{
   width:30px;
 }
+
 
 .footer div{
   display:inline-block;
@@ -193,7 +205,7 @@ button:hover{
 /*MOBILE ONLY MODIFICATIONS*/
 
 @media only screen and (max-width: 400px){
-  img{
+  .section img{
     width:200px;
   }
 }
