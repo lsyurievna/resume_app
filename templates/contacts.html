@@ -1,4 +1,27 @@
-<div class = "section" id = "contacts-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width> initial-scale=1.0">
+  <title>Mila</title>
+  <link rel="stylesheet"  href="{{ url_for('static', filename = 'styles.css') }}" >
+</head>
+
+<body>
+<div class = "page">
+<!--NAVIGATION-->
+
+  <div class = "nav">
+      <div class = "nav-link"><a href = "/">About</a></div>
+      <div class = "nav-link"><a href = "/">CV</a></div>
+      <div class = "nav-link"><a href = "/">Volunteering</a></div>
+      <div class = "nav-link"><a href = "/">Conferences and publications</a></div>
+      <div class = "nav-link"><a href = "/">Contacts</a></div>
+  </div>
+
+
+<div class = "section contacts">
 
   <div>
   <form
@@ -17,3 +40,13 @@
   </form>
 
 </div>
+
+<div class="footer">
+  <div><a href = "https://www.facebook.com/girlluyda/" target = "_blank"><img src = "{{ url_for('static', filename = 'facebook.png') }}"></a></div>
+  <div><a href = "https://github.com/lsyurievna" target = "_blank"><img src = "{{ url_for('static', filename = 'github.png') }}"></a></div>
+</div>
+
+
+</div>
+
+</body>

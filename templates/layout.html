@@ -13,7 +13,7 @@
 <!--NAVIGATION-->
 
   <div class = "nav">
-      <div class = "nav-link"><a href = "#about-section">About</a></div>
+      <div class = "nav-link"><a href = "/#about-section">About</a></div>
       <div class = "nav-link"><a href = "#CV-section">CV</a></div>
       <div class = "nav-link"><a href = "#volunteering-section">Volunteering</a></div>
       <div class = "nav-link"><a href = "#science-section">Conferences and publications</a></div>
@@ -24,7 +24,7 @@
 
   <div class = "section about" id = "about-section">
 
-    <div>
+    <div class = "bordered">
       <h3>Hi! My name is Mila.</h3>
       <h3>I am a Chemistry Honours Computer Science Minor student at <a href = "https://www.mun.ca/" target='_blank'>
           Memorial University of Newfoundland</a>. 
@@ -46,6 +46,7 @@
 
     <div>
       <h3>I am good at my studies</h3>
+      <hr>
       <ul>
         <li>GPA: 3.96 out of 4.00</li>
         <li>Donald and Evelyn Barton Chemistry Scholarship 2020-21</li>
@@ -57,6 +58,7 @@
       
     <div>
       <h3>I have worked in lots of research labs!</h3>
+      <hr>
       <ul>
         <li><a href = "#bodwell">SURA with Dr. Graham Bodwell (Summer 2021)</a></li>
         <li><a href = "#zhao">ISWEP with Dr. Yuming Zhao (Fall 2020)</a></li>
@@ -68,6 +70,7 @@
       
     <div>
       <h3>I have teaching experience</h3>
+      <hr>
       <ul>
         <li><a href = "#ta">TA for CHEM 1010 labs> both on campus and online 2019-20</a></li>
         <li><a href = "#lang-mun">Tutor and Tech Support at MUN Language Center 2019</a></li>
@@ -225,28 +228,6 @@
     </div>
 
 </div>
-
-<!--CONTACTS-->
-
-  <div class = "section" id = "contacts-section">
-
-    <div>
-    <form
-    action="{{api}}"
-    method="POST"> 
-    <label>Your email:</label>
-    <input type="email" name="_replyto" placeholder="youremail@mail.com">
-    </div>
-
-    <div class = "form-message">
-      <label>Your message:</label>
-      <textarea name="message" placeholder="Write your message here." rows=6 cols=12></textarea>
-    </div>
-
-    <button type="submit">Send</button>
-    </form>
-
-  </div>
 
 <!--FOOTER-->
 
